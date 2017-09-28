@@ -2,7 +2,8 @@
   <div class="media">
     <div class="media-body">
       <h4 class="media-heading">
-        <%= item.name %>
+        <p id="<%= item.id %>"><%= item.name %>
+        <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %></p>
       </h4>
       <small>
         submitted <%= time_ago_in_words(item.created_at) %> ago <br>
