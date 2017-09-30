@@ -6,7 +6,7 @@
         <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %></p>
       </h4>
       <small>
-        submitted <%= time_ago_in_words(item.created_at) %> ago <br>
+        <%= "#{distance_of_time_in_words(Time.now, item.created_at + 7.days)} before deletion" %>
       </small>
     </div>
   </div>
