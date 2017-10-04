@@ -1,9 +1,9 @@
 <% @user.items.each do |item| %>
-  <div class="media">
+  <div class="media" id="<%= item.id %>">
     <div class="media-body">
       <h4 class="media-heading">
-        <p id="<%= item.id %>"><%= item.name %>
-        <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %></p>
+        <p><%= item.name %>
+        <%= link_to "", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %></p>
       </h4>
       <small>
         <%= "#{distance_of_time_in_words(Time.now, item.created_at + 7.days)} before deletion" %>
